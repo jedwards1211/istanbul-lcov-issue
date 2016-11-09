@@ -3,6 +3,14 @@
 Demonstrates how lcov reporting crashes when a file is changed in the middle of a test,
 and the new lines are covered.
 
+**But changing the source code is bad!  Why should istanbul support this?**
+
+Yes, I agree, I only ran into this problem because I was integration-testing 
+client and server-side hot reloading in [crater](https://github.com/jedwards1211/crater) 
+by overwriting source files.
+I don't have an opinion on whether istanbul should support dynamically changed source code.
+I just made this repo in case they want to handle this situation more gracefully.
+
 The issue is **intermittent**.  In my experience it happens rougly 80% of the time.
 
 **It seems the bug only happens when transpiling with the `es2015` and `stage-1` presets --
