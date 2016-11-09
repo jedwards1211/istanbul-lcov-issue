@@ -1,7 +1,6 @@
 {
   "name": "istanbul-lcov-issue",
-  "version": "3.0.0",
-  "description": "my personal skeleton for ES2015 library NPM packages",
+  "description": "Demonstrates how lcov reporting crashes when a file is changed in the middle of a test, and the new lines are covered.",
   "scripts": {
     "start": "npm test",
     "test": "NODE_ENV=coverage nyc --reporter=lcov --reporter=text mocha ./test/index.js"
@@ -21,7 +20,11 @@
     "url": "git+https://github.com/jedwards1211/istanbul-lcov-issue.git"
   },
   "keywords": [
-    "es2015"
+    "es2015",
+    "stage-1",
+    "istanbul",
+    "nyc",
+    "lcov"
   ],
   "author": "Andy Edwards",
   "license": "MIT",
@@ -34,12 +37,8 @@
     "babel-plugin-istanbul": "^2.0.3",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-1": "^6.16.0",
-    "chai": "^3.5.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.1.0",
     "nyc": "^8.3.0"
-  },
-  "dependencies": {
-    "express": "^4.14.0"
   }
 }
