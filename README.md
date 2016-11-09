@@ -1,23 +1,9 @@
-# es2015-library-skeleton
+# istanbul-lcov-issue
 
-[![Build Status](https://travis-ci.org/jedwards1211/es2015-library-skeleton.svg?branch=master)](https://travis-ci.org/jedwards1211/es2015-library-skeleton)
-[![Coverage Status](https://coveralls.io/repos/github/jedwards1211/es2015-library-skeleton/badge.svg?branch=master)](https://coveralls.io/github/jedwards1211/es2015-library-skeleton?branch=master)
+Demonstrates how lcov reporting crashes when a file is changed in the middle of a test,
+and the new lines are covered.
 
-This is my personal skeleton for creating an ES2015 library npm package.  You are welcome to use it.
+**It seems the bug only happens when transpiling with the `es2015` and `stage-1` presets --
+if I remove them I no longer see the bug.**
 
-## Tools used
-
-* babel 6
-* mocha
-* chai
-* istanbul
-* nyc
-* babel-plugin-istanbul
-* eslint
-* eslint-watch
-* flow
-* flow-watch
-* Travis CI
-* Coveralls
-
-The `prepublish` script checks the output of `eslint` and `flow` and runs tests.
+Just `npm install && npm test`!
